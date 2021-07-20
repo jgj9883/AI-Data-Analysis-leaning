@@ -42,7 +42,7 @@
 
    주로 Autoencoder를 사용하는데 **Autoencoder**란 입력을 코드 혹은 latent variable(잠재 변수)로 압축하는 Encoding과, 이를 다시 원본과 가깝게 복원해내는 Decoding 과정으로 진행한다. 
 
-   (code size, latent variable의 dimension) 같은 hyper parameter에 따라 전반적인 복원 성능이 좌우 된기 때문에 양/불 판정 정확도가 Supervised Anomaly Detection에 비해 다소 불안정하다.
+   (code size, latent variable의 dimension) 같은 hyper parameter에 따라 전반적인 복원 성능이 좌우 되기 때문에 양/불 판정 정확도가 Supervised Anomaly Detection에 비해 다소 불안정하다.
 
    또한, input과 output의 차이를 어떻게 방식을 정의할 것인지, 어느 loss function을 사용해 autoencoder를 학습시킬지 등 여러가지 요인에 성능이 달라진다.
 
@@ -90,3 +90,36 @@ In-distribution 데이터 셋으로 network를 학습시킨 뒤, test 단계에�
 대부분의 연구에서 주로 사용하는 SoftMax 기반 classifier는 class 개수를 정해 놓고 가장 확률이 높은 class를 결과로 출력하는 방식이기 때문에, 예시로  4가지 종류의 강아지를 구분하는 classifier에 호랑이 이미지를 넣어주면 사람은 비정상 sample이라고 구분할 수 있는 반면 classifier는 4가지 class 중 하나의 class로 예측을 하게 된다.  이러한 Outlier sample을 걸러 내기 위해 Out-of-distribution Detection 알고리즘을 사용할 수 있다.
 
 또한 불독 이미지처럼 Novel 한 sample이 관찰됐을 때 이를 걸러낸 뒤, classifier가 기존에 있는 4가지 class 대신 불독이 새로 추가된 5가지 class를 구분하도록 학습하는 **Incremental Learning** 방법론과도 응용이 가능하다.
+
+
+
+
+
+## Principal Component Analysis
+
+##### autoencoder 종류
+
+youtube naverD2 autoencoder 한 강의 설명하기  
+
+간단한 난이도 통계학 공부
+
+
+
+Revisit Deep Neural Networks
+
+Maniford Learning
+
+Autoencoders
+
+- Linear Autoencoder
+- Stacking Autoencoder
+- **Denoising Autoencoder**
+- Stacked Denoising Autoencoder
+- Stochastic Contractive Autoencoder
+- Contractive Auroencoder
+
+- **Variational Autoencoders**
+- **Adversarial Auroencoder**
+
+Applications
+
